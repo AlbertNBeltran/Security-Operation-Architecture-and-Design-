@@ -10,10 +10,14 @@ This project explains how to automate security operations and change management 
 <img width="10376" height="2516" alt="Diagram Security Operations" src="https://github.com/user-attachments/assets/858ce5c9-c8d9-4061-977f-6dd09f2e959e" />
 
 ## Objectives
-1. 🔎 🎯 Discover, Inventory and scan assets for vulnerabilities using Tenable Vulnerabiliyt Management (Nessus)
-2. 📥 📊 Aggregate vulnerability and asset data using SPLUNK (SIEM) to manipulate, create report and generate trending dashboards
+1. 🔎 🎯 Discover, Inventory and scan assets for vulnerabilities using Tenable Vulnerability Management (Nessus)
+2. 📥 📊 Aggregate vulnerability and asset data using SPLUNK (SIEM) to manipulate, create reports and generate trending dashboards
 3. ⚙️ 🎟️ Automate ticket creation for critical vulnerabilities to streamline security operation tasks using ServiceNow (ITSM)  
 
+## Tech Stack
+- Tenable Vulnerability Management
+- Splunk
+- ServiceNow
 
 > [!IMPORTANT]
 > Key information users need to know to achieve their goal.
