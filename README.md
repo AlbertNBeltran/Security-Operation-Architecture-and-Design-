@@ -1,4 +1,4 @@
-# ⚙️🛠️ Security Operations Automation - Architecture and Design
+# ⚙️🛠️ Security Operations Automation (Architecture and Design)
 This project explains how to automate security operations and change management workflows by implementing security tools and intergrations via design and architectural principles.
 ### Why automate?
 - By automating Tenable with Splunk and ServiceNow, you establish a seamless, end-to-end vulnerability management workflow. This integration allows Splunk to prioritize vulnerabilities based on risk, while ServiceNow automatically handles the remediation process by creating, assigning, and tracking tickets.
