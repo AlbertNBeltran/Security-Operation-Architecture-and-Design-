@@ -42,9 +42,9 @@ This project explains how to automate security operations and change management 
 <img width="500" height="500" alt="Pasted image 20250809112929" src="https://github.com/user-attachments/assets/4667295a-6499-48be-b377-77b2385015df" />
 
 3. Install Tenable Add-on for Splunk and provide your TVM API keys to the addon configurtation.
-<img width="500" height="500" alt="Pasted image 20250809115044" src="https://github.com/user-attachments/assets/b97c28bd-8657-4c86-95cc-40db35e731dd" />
-<img width="500" height="500" alt="Pasted image 20250809130818" src="https://github.com/user-attachments/assets/87804962-8d04-4886-8c5c-4eb3a80fddb8" />
-<img width="500" height="500" alt="Pasted image 20250809131022" src="https://github.com/user-attachments/assets/5a825309-b48c-4a56-aeea-1dc92295356a" />
+<img width="5000" height="5000" alt="Pasted image 20250809115044" src="https://github.com/user-attachments/assets/b97c28bd-8657-4c86-95cc-40db35e731dd" />
+<img width="5000" height="5000" alt="Pasted image 20250809130818" src="https://github.com/user-attachments/assets/87804962-8d04-4886-8c5c-4eb3a80fddb8" />
+<img width="5000" height="5000" alt="Pasted image 20250809131022" src="https://github.com/user-attachments/assets/5a825309-b48c-4a56-aeea-1dc92295356a" />
 
 4. Configure Tenable VM data inputs and establish import intervals.
 <img width="5000" height="5000" alt="Pasted image 20250809132001" src="https://github.com/user-attachments/assets/a600b053-863e-44a6-b10f-32176003e1a8" />
