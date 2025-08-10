@@ -19,6 +19,17 @@ This project explains how to automate security operations and change management 
 - Splunk
 - ServiceNow
 
+## Tenable Vulnerability Setup
+1. Login into Tenable VM Cloud.tenable.com and
+
+![[Pasted image 20250809205654.png]]
+
+
+## Splunk Setup 
+
+## ServiceNow Setup
+
+
 > [!IMPORTANT]
 > Key information users need to know to achieve their goal.
 
