@@ -63,33 +63,49 @@ This project explains how to automate security operations and change management 
 6. Download ```Tenable App for Splunk``` in order to view preconfigured templates for vulnerability trends, reporting and dashboards.
 <img width="34540" height="18400" alt="Pasted image 20250809141753" src="https://github.com/user-attachments/assets/3fa85844-dc9e-4712-a1bd-52d7a7f7e200" />
 
+> [!IMPORTANT]
+> ServiceNow account details will be needed to complete Splunk -> ServiceNow Intergration.
 
-
-## ServiceNow Setup
-1. Splunk Cloud will be triggering alerts/incidents to ServiceNow which help maintain, assign and track vulnerability incidents for Security operation teams.
-<img width="8000" height="6000" alt="Pasted image 20250809201701" src="https://github.com/user-attachments/assets/9dba46e2-3d29-4476-b97d-4c8dcbcbc80f" />
-2. Created ServiceNow PDI Personal Developer Instance
-  
-3. <img width="400" height="400" alt="Pasted image 20250809152835" src="https://github.com/user-attachments/assets/65c52c05-de3b-4df8-b8c1-768adc932206" />
-<img width="400" height="400" alt="Pasted image 20250809153333" src="https://github.com/user-attachments/assets/cf75e491-e0ac-4ce0-95cd-de5903a0f0d7" />
-
-4. Download ``` Splunk add-on for ServiceNow ``` within Splunk Cloud.
-<img width="500" height="500" alt="Pasted image 20250809152355" src="https://github.com/user-attachments/assets/82de39bd-a8f1-46c9-be2c-acf5be94f924" />
+7. Download ``` Splunk add-on for ServiceNow ``` within Splunk Cloud.
+<img width="5000" height="5000" alt="Pasted image 20250809152355" src="https://github.com/user-attachments/assets/82de39bd-a8f1-46c9-be2c-acf5be94f924" />
 <img width="100000" height="100000" alt="Pasted image 20250809154213" src="https://github.com/user-attachments/assets/4a4ee95f-a2d3-4bb0-96ea-bc5ba7b9564b" />
+<img width="34560" height="7060" alt="Pasted image 20250809152520" src="https://github.com/user-attachments/assets/07d39b29-f3a7-46b6-ab49-7435fda781da" />
 
-
-
-
- > [!IMPORTANT]
-  >Ensure that you enable each individual input and add the Splunk account to the inputs as outlined here.
+8. Ensure that you enable each individual input and add the Splunk account to the inputs as outlined here.
 
 <img width="5000" height="5000" alt="Pasted image 20250809204137" src="https://github.com/user-attachments/assets/b9736b8a-d601-4876-81c8-0e5a888dd2c4" />
 
 
-> [!IMPORTANT]
-> Key information users need to know to achieve their goal.
+9. Create an Alert in Splunk based on saved filters. For example, we can focus on non informational vulns to focus on Critical, High, medium and low vulnerabilities.
 
-| Left-aligned | Center-aligned | Right-aligned |
-| :---         |     :---:      |          ---: |
-| git status   | git status     | git status    |
-| git diff     | git diff       | git diff      |
+ Filter:
+ ```
+| inputlookup io_vuln_data_lookup where (severity!="informational") AND data_source=Host  state=open OR state=reopened | eval product="Tenable.io" | rename synopsis as signature, plugin_id as definition_id, last_found as time_field, first_found as first_time_field, dns_name as asset_name_detail | search asset_name_detail!=null
+```
+<img width="34560" height="18048" alt="Pasted image 20250810221549" src="https://github.com/user-attachments/assets/ac0fab04-fce1-47bd-ab9c-fa733c19aff1" />
+
+    
+<img width="34420" height="18400" alt="Pasted image 20250809190639" src="https://github.com/user-attachments/assets/a0282e7c-fd7d-4e86-ac3e-13e6f1c00788" />
+<img width="34560" height="18340" alt="Pasted image 20250809190835" src="https://github.com/user-attachments/assets/74e963f0-9afe-4f61-adb4-95e520268704" />
+<img width="34520" height="11800" alt="Pasted image 20250809191203" src="https://github.com/user-attachments/assets/9d7d1c16-bafb-4d13-bffb-4d6da59910ed" />
+
+
+## ServiceNow Setup
+1. Splunk Cloud will be triggering alerts/incidents to ServiceNow which then helps maintain, assign and track vulnerability incidents/tickets for Security operation workflow.
+<img width="8000" height="6000" alt="Pasted image 20250809201701" src="https://github.com/user-attachments/assets/9dba46e2-3d29-4476-b97d-4c8dcbcbc80f" />
+2. Create a ServiceNow PDI Personal Developer account and deploy the PDI instance using https://signon.servicenow.com/.
+<img width="500" height="500" alt="Pasted image 20250809152835" src="https://github.com/user-attachments/assets/65c52c05-de3b-4df8-b8c1-768adc932206" />
+<img width="500" height="500" alt="Pasted image 20250809153333" src="https://github.com/user-attachments/assets/cf75e491-e0ac-4ce0-95cd-de5903a0f0d7" />
+
+3. Install ```The Splunk Intergration``` from the ServiceNow store to intstall the neccessary plugins to enable you to sync incidnets from Splunk to ServiceNow.
+
+> [!IMPORTANT]
+> Note that The Splunk Integration requirements will need a non-PDI ServiceNow subscription/license https://www.servicenow.com/community/developer-forum/splunk-integration-with-pdi-instance/m-p/3065261.
+<img width="34404" height="18300" alt="Pasted image 20250810222556" src="https://github.com/user-attachments/assets/103e1913-cbfa-49aa-a44e-81cd1a6c4a97" />
+
+4. This will now allow you to fully sync critical vulnerabilties as INC incidents which can then be assigned to Security Operation teams for remediation or to a patch managment team for a continous and automated workflow.
+<img width="34500" height="18042" alt="Pasted image 20250809203631" src="https://github.com/user-attachments/assets/81d00321-e54e-4844-a34d-6815dff03261" />
+<img width="34054" height="18030" alt="Pasted image 20250809205035" src="https://github.com/user-attachments/assets/54872c80-2939-4f2d-bcd6-e5b7f4e12ac6" />
+<img width="35804" height="18024" alt="Pasted image 20250809201814" src="https://github.com/user-attachments/assets/4fba64fd-48b1-49a5-b72f-31aaab75a1dd" />
+
+
