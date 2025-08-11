@@ -1,5 +1,11 @@
-# ⚙️🛠️ Security Operations Automation (Architecture and Design)
+<div align="center">
+
+  # ⚙️🛠️ Security Operations Automation (Architecture and Design)
+
 This project explains how to automate security operations and change management workflows by implementing security tools and intergrations via design and architectural principles.
+
+</div>
+
 ## Why automate?
 - By automating Tenable with Splunk and ServiceNow, you establish a seamless, end-to-end vulnerability management workflow.
 - This integration allows Splunk to prioritize vulnerabilities based on risk, while ServiceNow automatically handles the remediation process by creating, assigning, and tracking tickets.
@@ -7,8 +13,11 @@ This project explains how to automate security operations and change management 
 - The goal is to create an automated, closed-loop vulnerability management system that dramatically reduces the time it takes to identify, prioritize, and fix security vulnerabilities.
 - This process streamlines the entire workflow, connecting vulnerability data to security analytics and the security operations team's workflow to ensure that critical issues are addressed quickly and efficiently.
 
+## 🧠 How does it work?
+<div align="center">
+<img  src="https://readme-typing-svg.herokuapp.com?color=45ffaa&center=true&vCenter=true&size=40&width=900&height=80&lines=Design+->+Create+->+Automate"/>
+</div>
 
-## 🧠 How it works
 <img width="20376" height="7516" alt="Diagram Security Operations" src="https://github.com/user-attachments/assets/858ce5c9-c8d9-4061-977f-6dd09f2e959e" />
 
 ## ✅ Objectives
@@ -17,9 +26,21 @@ This project explains how to automate security operations and change management 
 3. ⚙️ 🎟️ Automate ticket creation for critical vulnerabilities to streamline security operation tasks using ServiceNow (ITSM)  
 
 ## 📋 Tech Stack
-- Tenable Vulnerability Management
-- Splunk
-- ServiceNow
+
+| Software     | Version |
+| ---      | ---       |
+| [Tenable Vulnerability Management](https://docs.tenable.com/release-notes/Content/vulnerability-management/2025.htm)  | io Cloud |
+| [Splunk Cloud Platform](https://www.splunk.com/en_us/download.html?_gl=1*1ag37oo*_gcl_au*MTE0MTg3NzU1MS4xNzU0NDU2NDY5LjY5MTMzNzI1MS4xNzU0NzYzODYxLjE3NTQ3NjM4Njg.*FPAU*MTE0MTg3NzU1MS4xNzU0NDU2NDY5*_ga*MTkwMDI4NzUxMS4xNzU0NDU2NDY5*_ga_5EPM2P39FV*czE3NTQ3OTUwNDYkbzckZzEkdDE3NTQ3OTUwNjYkajQwJGwwJGgxMTU3MTI0Mjcx)    |  Cloud Platform |
+| [ServiceNow PDI Instance](https://developer.servicenow.com/dev.do#!/learn/learning-plans/washingtondc/new_to_servicenow/app_store_learnv2_buildmyfirstapp_washingtondc_personal_developer_instances)  | Developer Cloud Platform (Yokohama) |
+
+| Store    | Add-Ons     | Version |
+| ---      | ---      | ---       |
+|SplunkBase |[Tenable Add-On for Splunk](https://splunkbase.splunk.com/app/4060)|8.0.0|
+|SplunkBase |[Tenable App for Splunk](https://splunkbase.splunk.com/app/4061)|6.1.0|
+|ServiceNow Store|[Splunk Integration](https://store.servicenow.com/store/app/890cab2e1b246a50a85b16db234bcb17)|1.1.8|
+
+
+<img src="https://raw.githubusercontent.com/alo7lika/PyVerse/refs/heads/main/Images/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="9000">
 
 ## 🔎 🎯 Tenable Vulnerability Management Setup
 1. We will need to have deployed Nessus Scanners or Nessus Agents in order to inventory assets and prep them for credentialed vulnerability scanning.
@@ -49,7 +70,7 @@ This project explains how to automate security operations and change management 
 <img width="500" height="500" alt="Pasted image 20250808004846" src="https://github.com/user-attachments/assets/90d899d3-6a82-492e-bcec-fa006cbba69a" />
 <img width="500" height="500" alt="Pasted image 20250809112929" src="https://github.com/user-attachments/assets/4667295a-6499-48be-b377-77b2385015df" />
 
-3. Install Tenable Add-on for Splunk and provide your TVM API keys to the addon configurtation.
+3. [Install](https://splunkbase.splunk.com/app/4060) ```Tenable Add-on for Splunk``` and provide your TVM API keys to the addon configurtation.
 <img width="5000" height="5000" alt="Pasted image 20250809115044" src="https://github.com/user-attachments/assets/b97c28bd-8657-4c86-95cc-40db35e731dd" />
 <img width="5000" height="5000" alt="Pasted image 20250809130818" src="https://github.com/user-attachments/assets/87804962-8d04-4886-8c5c-4eb3a80fddb8" />
 <img width="5000" height="5000" alt="Pasted image 20250809131022" src="https://github.com/user-attachments/assets/5a825309-b48c-4a56-aeea-1dc92295356a" />
@@ -100,7 +121,7 @@ This project explains how to automate security operations and change management 
 <img width="500" height="500" alt="Pasted image 20250809152835" src="https://github.com/user-attachments/assets/65c52c05-de3b-4df8-b8c1-768adc932206" />
 <img width="500" height="500" alt="Pasted image 20250809153333" src="https://github.com/user-attachments/assets/cf75e491-e0ac-4ce0-95cd-de5903a0f0d7" />
 
-3. Install ```The Splunk Intergration``` from the ServiceNow store to intstall the neccessary plugins to enable you to sync incidnets from Splunk to ServiceNow.
+3. [Install](https://store.servicenow.com/store/app/890cab2e1b246a50a85b16db234bcb17) ```The Splunk Intergration``` from the ServiceNow store to intstall the neccessary plugins to enable you to sync incidnets from Splunk to ServiceNow.
 
 > [!IMPORTANT]
 > [Note that The Splunk Integration requirements will need a non-PDI ServiceNow subscription/license](https://www.servicenow.com/community/developer-forum/splunk-integration-with-pdi-instance/m-p/3065261)
@@ -112,4 +133,5 @@ This project explains how to automate security operations and change management 
 <img width="34054" height="18030" alt="Pasted image 20250809205035" src="https://github.com/user-attachments/assets/54872c80-2939-4f2d-bcd6-e5b7f4e12ac6" />
 <img width="35804" height="18024" alt="Pasted image 20250809201814" src="https://github.com/user-attachments/assets/4fba64fd-48b1-49a5-b72f-31aaab75a1dd" />
 
+<img src="https://raw.githubusercontent.com/alo7lika/PyVerse/refs/heads/main/Images/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="9000">
 
