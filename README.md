@@ -1,25 +1,27 @@
 # ⚙️🛠️ Security Operations Automation (Architecture and Design)
 This project explains how to automate security operations and change management workflows by implementing security tools and intergrations via design and architectural principles.
-### Why automate?
-- By automating Tenable with Splunk and ServiceNow, you establish a seamless, end-to-end vulnerability management workflow. This integration allows Splunk to prioritize vulnerabilities based on risk, while ServiceNow automatically handles the remediation process by creating, assigning, and tracking tickets.
-### What's the goal?
-- The goal is to create an automated, closed-loop vulnerability management system that dramatically reduces the time it takes to identify, prioritize, and fix security vulnerabilities. This process streamlines the entire workflow, connecting vulnerability data to security analytics and the security operations team's workflow to ensure that critical issues are addressed quickly and efficiently.
+## Why automate?
+- By automating Tenable with Splunk and ServiceNow, you establish a seamless, end-to-end vulnerability management workflow.
+- This integration allows Splunk to prioritize vulnerabilities based on risk, while ServiceNow automatically handles the remediation process by creating, assigning, and tracking tickets.
+## What's the goal?
+- The goal is to create an automated, closed-loop vulnerability management system that dramatically reduces the time it takes to identify, prioritize, and fix security vulnerabilities.
+- This process streamlines the entire workflow, connecting vulnerability data to security analytics and the security operations team's workflow to ensure that critical issues are addressed quickly and efficiently.
 
 
 ## 🧠 How it works
 <img width="20376" height="7516" alt="Diagram Security Operations" src="https://github.com/user-attachments/assets/858ce5c9-c8d9-4061-977f-6dd09f2e959e" />
 
-## Objectives
+## ✅ Objectives
 1. 🔎 🎯 Discover, Inventory and scan assets for vulnerabilities using Tenable Vulnerability Management (Nessus)
 2. 📥 📊 Aggregate vulnerability and asset data using SPLUNK (SIEM) to manipulate, create reports and generate trending dashboards
 3. ⚙️ 🎟️ Automate ticket creation for critical vulnerabilities to streamline security operation tasks using ServiceNow (ITSM)  
 
-## Tech Stack
+## 📋 Tech Stack
 - Tenable Vulnerability Management
 - Splunk
 - ServiceNow
 
-## Tenable Vulnerability Management Setup
+## 🔎 🎯 Tenable Vulnerability Management Setup
 1. We will need to have deployed Nessus Scanners or Nessus Agents in order to inventory assets and prep them for credentialed vulnerability scanning.
 - TVM Scanning guide: https://docs.tenable.com/vulnerability-management/Content/PDF/Tenable_Vulnerability_Management-User_Guide.pdf
 <img width="800" height="600" alt="Pasted image 20250810003130" src="https://github.com/user-attachments/assets/2392bcb5-1296-4fc8-9b09-b707949f449b" />
@@ -35,7 +37,7 @@ This project explains how to automate security operations and change management 
 
 4. Document your API Access and Secret keys. 
 
-## Splunk Setup 
+## 📥 📊 Splunk Setup 
 1. We will be importing vulnerabilty data from TVM to Splunk in order to normalize and centralize the data.
 - Splunk intergration guide: https://docs.tenable.com/integrations/Splunk/Content/PDF/Tenable_and_Splunk_Integration_Guide.pdf
 
@@ -90,7 +92,7 @@ This project explains how to automate security operations and change management 
 <img width="34520" height="11800" alt="Pasted image 20250809191203" src="https://github.com/user-attachments/assets/9d7d1c16-bafb-4d13-bffb-4d6da59910ed" />
 
 
-## ServiceNow Setup
+## ⚙️ 🎟️ ServiceNow Setup
 1. Splunk Cloud will be triggering alerts/incidents to ServiceNow which then helps maintain, assign and track vulnerability incidents/tickets for Security operation workflow.
 <img width="8000" height="6000" alt="Pasted image 20250809201701" src="https://github.com/user-attachments/assets/9dba46e2-3d29-4476-b97d-4c8dcbcbc80f" />
 2. Create a ServiceNow PDI Personal Developer account and deploy the PDI instance using https://signon.servicenow.com/.
