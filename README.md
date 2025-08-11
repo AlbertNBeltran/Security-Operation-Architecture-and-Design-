@@ -39,11 +39,11 @@ This project explains how to automate security operations and change management 
 
 ## 📥 📊 Splunk Setup 
 1. We will be importing vulnerabilty data from TVM to Splunk in order to normalize and centralize the data.
-- Splunk intergration guide: https://docs.tenable.com/integrations/Splunk/Content/PDF/Tenable_and_Splunk_Integration_Guide.pdf
+- [Splunk intergration guide](https://docs.tenable.com/integrations/Splunk/Content/PDF/Tenable_and_Splunk_Integration_Guide.pdf)
 
 <img width="800" height="600" alt="Pasted image 20250809113632" src="https://github.com/user-attachments/assets/e3a21609-76eb-430f-a283-c56d90fd160f" />
 
-2. Signed up to Splunk Cloud
+2. Signed up to Splunk Cloud [here](https://www.splunk.com/en_us/download.html?_gl=1*1ag37oo*_gcl_au*MTE0MTg3NzU1MS4xNzU0NDU2NDY5LjY5MTMzNzI1MS4xNzU0NzYzODYxLjE3NTQ3NjM4Njg.*FPAU*MTE0MTg3NzU1MS4xNzU0NDU2NDY5*_ga*MTkwMDI4NzUxMS4xNzU0NDU2NDY5*_ga_5EPM2P39FV*czE3NTQ3OTUwNDYkbzckZzEkdDE3NTQ3OTUwNjYkajQwJGwwJGgxMTU3MTI0Mjcx)
   > [!IMPORTANT]
   >Splunk Cloud can take a few hours to build and access.
 <img width="500" height="500" alt="Pasted image 20250808004846" src="https://github.com/user-attachments/assets/90d899d3-6a82-492e-bcec-fa006cbba69a" />
@@ -62,13 +62,14 @@ This project explains how to automate security operations and change management 
 <img width="34520" height="18340" alt="Pasted image 20250809141454" src="https://github.com/user-attachments/assets/e933f9b2-204b-401a-a364-7da3d2d0b60a" />
 <img width="34406" height="1844" alt="Pasted image 20250809140640" src="https://github.com/user-attachments/assets/f2e950e7-6d89-4eb5-b637-c7c92269de54" />
 
-6. Download ```Tenable App for Splunk``` in order to view preconfigured templates for vulnerability trends, reporting and dashboards.
+6. [Download](https://splunkbase.splunk.com/app/4061) ```Tenable App for Splunk``` in order to view preconfigured templates for vulnerability trends, reporting and dashboards.
 <img width="34540" height="18400" alt="Pasted image 20250809141753" src="https://github.com/user-attachments/assets/3fa85844-dc9e-4712-a1bd-52d7a7f7e200" />
 
 > [!IMPORTANT]
 > ServiceNow account details will be needed to complete Splunk -> ServiceNow Intergration.
 
 7. Download ``` Splunk add-on for ServiceNow ``` within Splunk Cloud.
+- [Splunk Intergation Details](https://store.servicenow.com/store/app/890cab2e1b246a50a85b16db234bcb17)
 <img width="5000" height="5000" alt="Pasted image 20250809152355" src="https://github.com/user-attachments/assets/82de39bd-a8f1-46c9-be2c-acf5be94f924" />
 <img width="100000" height="100000" alt="Pasted image 20250809154213" src="https://github.com/user-attachments/assets/4a4ee95f-a2d3-4bb0-96ea-bc5ba7b9564b" />
 <img width="34560" height="7060" alt="Pasted image 20250809152520" src="https://github.com/user-attachments/assets/07d39b29-f3a7-46b6-ab49-7435fda781da" />
@@ -102,7 +103,8 @@ This project explains how to automate security operations and change management 
 3. Install ```The Splunk Intergration``` from the ServiceNow store to intstall the neccessary plugins to enable you to sync incidnets from Splunk to ServiceNow.
 
 > [!IMPORTANT]
-> Note that The Splunk Integration requirements will need a non-PDI ServiceNow subscription/license https://www.servicenow.com/community/developer-forum/splunk-integration-with-pdi-instance/m-p/3065261.
+> [Note that The Splunk Integration requirements will need a non-PDI ServiceNow subscription/license](https://www.servicenow.com/community/developer-forum/splunk-integration-with-pdi-instance/m-p/3065261)
+
 <img width="34404" height="18300" alt="Pasted image 20250810222556" src="https://github.com/user-attachments/assets/103e1913-cbfa-49aa-a44e-81cd1a6c4a97" />
 
 4. This will now allow you to fully sync critical vulnerabilties as INC incidents which can then be assigned to Security Operation teams for remediation or to a patch managment team for a continous and automated workflow.
