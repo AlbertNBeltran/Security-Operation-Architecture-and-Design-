@@ -23,7 +23,7 @@ This project explains how to automate security operations and change management 
 
 ## 🔎 🎯 Tenable Vulnerability Management Setup
 1. We will need to have deployed Nessus Scanners or Nessus Agents in order to inventory assets and prep them for credentialed vulnerability scanning.
-- TVM Scanning guide: https://docs.tenable.com/vulnerability-management/Content/PDF/Tenable_Vulnerability_Management-User_Guide.pdf
+- [TVM Scanning guide](https://docs.tenable.com/vulnerability-management/Content/PDF/Tenable_Vulnerability_Management-User_Guide.pdf)
 <img width="800" height="600" alt="Pasted image 20250810003130" src="https://github.com/user-attachments/assets/2392bcb5-1296-4fc8-9b09-b707949f449b" />
 
 
