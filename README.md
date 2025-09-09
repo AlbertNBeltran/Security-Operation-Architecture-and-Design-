@@ -1,3 +1,7 @@
+<picture>
+    <img width="3000" height="500" alt="Image" align="left" src="https://github.com/AlbertNBeltran/AlbertNBeltran/blob/main/Gemini_Generated_Image_mfys5rmfys5rmfys.png" /> 
+  </picture>
+
 <div align="center">
 
   # ⚙️🛠️ Automating Security Operations  
